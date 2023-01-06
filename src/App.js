@@ -10,7 +10,7 @@ function App () {
 
   const getNews = async () => {
     const key = process.env.REACT_APP_APIKEY
-    const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${category}&apiKey=${key}`
+    const url = `https://newsapi.org/v2/top-headlines?country=ar&category=${category}&pageSize=5&apiKey=${key}`
 
     const response = await fetch(url)
     const news = await response.json()
