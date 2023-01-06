@@ -1,12 +1,12 @@
-#Noticias!
+# Noticias!
 
-##Una App para ver las ultimas noticas filtrados por categoria
-#*solo noticias de argentina
+## Una App para ver las ultimas noticas filtrados por categoria
+# *solo noticias de argentina
 
-##Desktop
+## Mobile
 ![Alt Text](https://i.ibb.co/3Nz871p/Captura-de-pantalla-2023-01-06-160004.webp)
 
-##Mobile
+## Desktop
 ![Alt Text](https://i.ibb.co/cNsYBvR/Captura-de-pantalla-2023-01-06-155646.webp)
 
 ## Diseño inspirado por Andri Prasetia :
