@@ -8,7 +8,7 @@
 
 .item__img {
   width: 100%;
-  height: 70%;
+  aspect-ratio: 1.80;
   border-radius: 12px;
   position: absolute;
   top: 0;
@@ -60,38 +60,4 @@
 .item_button a {
   text-decoration: none;
   color: white;
-}
-
-.button_next {
-  width: 10vw;
-  height: 4vw;
-}
-
-.button_prev {
-  width: 5vw;
-  height: 4vw;
-}
-
-.bottom_controls {
-  width: calc(60vw - 12vh);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.dot_container {
-  width: 20%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.dot_full, .dot_empty {
-  width: 1vw;
-  height: 1vw;
-}
-
-.arrow_container {
-  width: 35%;
-  display: flex;
-  justify-content: space-between;
 }
