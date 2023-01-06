@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './News.module.css'
 
 const NewsItem = ({ data }) => {
-  const { urlToImage, url, title, description, author, publishedAt } = data
+  if (Object.keys(data).length === 0) return null
+
+  const { urlToImage, title, description, author, publishedAt } = data
 
   const correctTitle = title.replace(/^(.*)-.*$/, '$1')
 
@@ -22,14 +24,6 @@ const NewsItem = ({ data }) => {
           <h1>{correctTitle}</h1>
           <span>{description}</span>
         </div>
-        {/*         <button className={styles.item_button}>
-          <a
-            href={url}
-            target='_blank'
-            rel='noopener noreferrer'
-          >Ver Noticia completa
-          </a>
-        </button> */}
       </div>
     </div>
   )
