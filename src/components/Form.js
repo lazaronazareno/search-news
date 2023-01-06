@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useCategories from '../hooks/useCategories'
 import { OptionCategories } from '../utils'
+import PropTypes from 'prop-types'
 
 const Form = ({ setCategory }) => {
   const [option, Categories] = useCategories('general', OptionCategories)
@@ -17,6 +18,10 @@ const Form = ({ setCategory }) => {
       </form>
     </div>
   )
+}
+
+Form.propTypes = {
+  setCategory: PropTypes.func.isRequired
 }
 
 export default Form

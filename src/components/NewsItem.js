@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './News.module.css'
 import ImageNotFound from '../assets/image-not-found.png'
+import PropTypes from 'prop-types'
 
 const NewsItem = ({ data }) => {
   if (Object.keys(data).length === 0) return null
@@ -31,6 +32,10 @@ const NewsItem = ({ data }) => {
       </div>
     </div>
   )
+}
+
+NewsItem.propTypes = {
+  data: PropTypes.object.isRequired
 }
 
 export default NewsItem

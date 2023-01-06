@@ -2,9 +2,10 @@ import React from 'react'
 import Carousel from 'nuka-carousel'
 import styles from './Carousel.module.css'
 import { DotButtons, NextButton, PrevButton } from './CarouselButtons'
+import PropTypes from 'prop-types'
 
 const CarouselComponent = ({ children }) => {
-  const BottomButtons = ({ nextOnClick, nextDisabled, prevOnClick, prevDisabled, slideCount, currentSlide, goOnClick }) => (
+  const BottomButtons = ({ nextOnClick, prevOnClick, slideCount, currentSlide, goOnClick }) => (
     <div className={styles.bottom_controls}>
       <DotButtons
         slideCount={slideCount}
@@ -14,11 +15,9 @@ const CarouselComponent = ({ children }) => {
       <div className={styles.arrow_container}>
         <PrevButton
           onClick={prevOnClick}
-          nextDisabled={prevDisabled}
         />
         <NextButton
           onClick={nextOnClick}
-          nextDisabled={nextDisabled}
         />
       </div>
     </div>
@@ -33,9 +32,7 @@ const CarouselComponent = ({ children }) => {
       }}
       className={styles.carousel}
       renderBottomCenterControls={({
-        nextDisabled,
         nextSlide,
-        previousDisabled,
         previousSlide,
         slideCount,
         currentSlide,
@@ -43,9 +40,7 @@ const CarouselComponent = ({ children }) => {
       }) => (
         <BottomButtons
           nextOnClick={nextSlide}
-          nextDisabled={nextDisabled}
           prevOnClick={previousSlide}
-          prevDisabled={previousDisabled}
           slideCount={slideCount}
           currentSlide={currentSlide}
           goOnClick={goToSlide}
@@ -57,6 +52,10 @@ const CarouselComponent = ({ children }) => {
     </Carousel>
 
   )
+}
+
+Carousel.propTypes = {
+  children: PropTypes.element.isRequired
 }
 
 export default CarouselComponent

@@ -3,8 +3,9 @@ import NextArrow from '../assets/new-right-arrow.png'
 import PrevArrow from '../assets/left-arrow.png'
 import DotFull from '../assets/dot-full.png'
 import DotEmpty from '../assets/dot-empty.png'
+import PropTypes from 'prop-types'
 
-export const NextButton = ({ onClick, disabled }) => (
+export const NextButton = ({ onClick }) => (
   <img
     src={NextArrow}
     className={styles.button_next}
@@ -13,7 +14,10 @@ export const NextButton = ({ onClick, disabled }) => (
   />
 )
 
-export const PrevButton = ({ onClick, disabled }) => (
+NextButton.propTypes = {
+  onClick: PropTypes.func.isRequired
+}
+export const PrevButton = ({ onClick }) => (
   <img
     src={PrevArrow}
     className={styles.button_prev}
@@ -21,6 +25,10 @@ export const PrevButton = ({ onClick, disabled }) => (
     alt='Arrow icons created by Stockio - Flaticon'
   />
 )
+
+PrevButton.propTypes = {
+  onClick: PropTypes.func.isRequired
+}
 
 export const DotButtons = ({ slideCount, currentSlide, onClick }) => {
   const array = Array.from({ length: slideCount }, (v, i) => i)
@@ -44,4 +52,10 @@ export const DotButtons = ({ slideCount, currentSlide, onClick }) => {
       ))}
     </div>
   )
+}
+
+DotButtons.propTypes = {
+  slideCount: PropTypes.number.isRequired,
+  currentSlide: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 }
