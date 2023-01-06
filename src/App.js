@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Form from './components/Form'
 import Header from './components/Header'
 import NewsList from './components/NewsList'
+import Spinner from './components/Spinner'
 
 function App () {
   const [category, setCategory] = useState('')
@@ -21,7 +22,7 @@ function App () {
       setLoading(false)
 
       setNews(news.articles)
-    }, 1000)
+    }, 2000)
   }
 
   useEffect(() => {
@@ -29,7 +30,7 @@ function App () {
   }, [category])
 
   const renderComponent = (loading)
-    ? <span>Cargando...</span>
+    ? <Spinner />
     : <NewsList news={news} />
 
   return (
