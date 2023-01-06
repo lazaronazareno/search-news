@@ -1,0 +1,31 @@
+
+.bottom_controls {
+  width: calc(60vw - 12vh);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow_container {
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_prev, .button_next {
+  width: 5vw;
+  height: 4vw;
+  cursor: pointer;
+}
+
+.dot_container {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dot_full, .dot_empty {
+  width: 1vw;
+  height: 1vw;
+  cursor: pointer;
+}
