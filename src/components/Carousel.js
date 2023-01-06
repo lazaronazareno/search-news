@@ -27,7 +27,11 @@ const CarouselComponent = ({ children }) => {
   return (
     <Carousel
       wrapAround
-      style={{ borderRadius: '12px' }}
+      style={{
+        borderRadius: '12px',
+        minHeight: '80vh'
+      }}
+      className={styles.carousel}
       renderBottomCenterControls={({
         nextDisabled,
         nextSlide,

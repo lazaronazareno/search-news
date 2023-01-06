@@ -13,8 +13,8 @@
 }
 
 .button_prev, .button_next {
-  width: 5vw;
-  height: 4vw;
+  width: 4rem;
+  height: 3rem;
   cursor: pointer;
 }
 
@@ -25,7 +25,37 @@
 }
 
 .dot_full, .dot_empty {
-  width: 1vw;
-  height: 1vw;
+  width: 1rem;
+  height: 1rem;
   cursor: pointer;
+}
+
+@media (max-width : 1000px) {
+  .bottom_controls {
+    width: calc(70vw - 8vh);
+  }
+}
+
+@media (max-width : 850px) {
+  .bottom_controls {
+    width: calc(80vw - 4vh);
+  }
+  .carousel {
+    height: 90vh!important;
+  }
+
+  .arrow_container {
+    width: 40%;
+  }
+  
+  .dot_container {
+    width: 30%;
+  }
+}
+
+@media (max-width : 650px) {
+
+  .carousel {
+    height: 100vh!important;
+  }
 }

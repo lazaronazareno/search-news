@@ -5,7 +5,7 @@ const useCategories = (initialState, options) => {
 
   const Categories = () => (
     <div
-      className='container-fluid my-3 border-bottom d-flex justify-content-evenly'
+      className='container-fluid my-3 border-bottom d-flex flex-wrap gap-3 justify-content-evenly'
       value={value}
       onClick={e => setValue(e.target.attributes.value.value)}
     >
