@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './NewsItem.module.css'
+import styles from './News.module.css'
 
 const NewsItem = ({ data }) => {
   const { urlToImage, url, title, description, author, publishedAt } = data
@@ -22,14 +22,14 @@ const NewsItem = ({ data }) => {
           <h1>{correctTitle}</h1>
           <span>{description}</span>
         </div>
-        <button className={styles.item_button}>
+        {/*         <button className={styles.item_button}>
           <a
             href={url}
             target='_blank'
             rel='noopener noreferrer'
           >Ver Noticia completa
           </a>
-        </button>
+        </button> */}
       </div>
     </div>
   )
