@@ -11,7 +11,7 @@ const Form = ({ setCategory }) => {
   return (
     <div className='d-flex justify-content-center'>
       <form
-        className='container p-2 d-flex flex-column'
+        className='container-fluid px-5 p-2 d-flex flex-column'
       >
         <Categories />
       </form>

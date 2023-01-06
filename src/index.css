@@ -9,3 +9,23 @@ body {
 code {
   font-family: 'Playfair Display', serif;
 }
+
+.categories {
+  cursor: pointer;
+}
+
+.categories:hover {
+  color: navy;
+  font-weight: 600;
+}
+
+.active {
+  border-bottom: .5rem solid navy;
+  font-weight: 700;
+  margin: 0;
+  transition: border-bottom .2s ease;
+}
+
+.active:hover {
+  font-weight: 800;
+}

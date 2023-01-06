@@ -3,7 +3,7 @@ import NewsItem from './NewsItem'
 
 const NewsList = ({ news }) => {
   return (
-    <div>
+    <div className='px-5'>
       {news.map(item => (
         <NewsItem key={item.url} data={item} />
       ))}
