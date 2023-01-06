@@ -20,7 +20,6 @@ function App () {
 
     setTimeout(() => {
       setLoading(false)
-
       setNews(news.articles)
     }, 2000)
   }
@@ -29,16 +28,14 @@ function App () {
     getNews()
   }, [category])
 
-  const renderComponent = (loading)
-    ? <Spinner />
-    : <NewsList news={news} />
-
   return (
     <div>
       <Header title='Noticias' />
       <div>
         <Form setCategory={setCategory} />
-        {renderComponent}
+        {loading
+          ? <Spinner />
+          : <NewsList news={news} />}
       </div>
     </div>
   )
