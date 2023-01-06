@@ -30,7 +30,7 @@ function App () {
 
   return (
     <div>
-      <Header title='Noticias' />
+      <Header title='Noticias!' />
       <div>
         <Form setCategory={setCategory} />
         {loading
